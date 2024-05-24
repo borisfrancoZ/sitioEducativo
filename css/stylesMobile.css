@@ -1,0 +1,1019 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+@font-face {
+  font-family: 'Kids Komik';
+  src: url('../fonts/kidskomik/KidsKomik/KidsKomik.ttf') format('truetype');
+}
+* {
+  box-sizing: border-box;
+}
+
+
+/* ===== mobile ================ */
+@media only screen and (max-width: 767px) {
+
+  .desktop-content{
+    display: none;
+  }
+
+  :root{
+    font-size: 16px;
+    font-family: 'Open Sans';
+    --text-primary: #b6b6b6;
+    --text-secondary: #ececec;
+    --bg-primary: #23232e;
+    --bg-secondary: #141418;
+    --sidebar-color: #ffffff;
+    --primary-color: #695CFE;
+    --primary-color-light: #F6F5FF;
+    --toggle-color: #DDD;
+    --text-color: #707070;
+
+    /* ====== Transition ====== */
+    --tran-03: all 0.2s ease;
+    --tran-03: all 0.3s ease;
+    --tran-04: all 0.3s ease;
+    --tran-05: all 0.3s ease;
+
+  }
+html, body {
+  overflow-x: hidden;
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: var(--body-color);
+  transition: var(--tran-05);
+}
+
+::selection{
+  background-color: var(--primary-color);
+  color: #fff;
+}
+
+/* ==== sidebar  */
+.sidebar{
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 350px;
+  padding: 10px 14px;
+  background: var(--sidebar-color);
+  transition: var(--tran-05);
+  z-index: 100;  
+}
+.sidebar.close{
+  width: 88px;
+
+}
+/* ===== Reusable code - Here ===== */
+.sidebar li{
+  height: 50px;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.sidebar header .image,
+.sidebar .icon{
+  min-width: 60px;
+  border-radius: 6px;
+}
+
+.container-grasszonesuperiorMobile {
+  background-size: cover;
+  padding: 20px;
+  text-align: center;
+  overflow-x: hidden;
+  background-image: url(/img/fondolago.svg);
+}
+.botonVerMas-Container-grasszonesuperiorMobile{
+  height: auto;
+  width: 40vh;
+  margin-top: -60px;
+  margin-bottom: 20px;
+}
+
+a > .botonGrasszone{
+  max-inline-size: 65%;
+  block-size: auto;
+  left: -10px;
+}
+
+.observatorioMobile {
+  width: 80%; /* Adjust as needed */
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.parrafobservatorioMobile {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #333; /* Adjust as needed */
+  background-color: #f0eade;
+  border-radius: 10px;
+  box-shadow: #23232e 0px 0px 10px;
+  padding: 10px;
+  margin-bottom: 5rem;
+}
+
+
+/* Styles for lakezone-mobile */
+.lakezone-mobile {
+  padding: 0 5vh 10vh 5vh;
+  left: 30px;
+  text-align: center;
+  background-image: url(../img/fondolago.svg);
+  background-size: cover;
+}
+.lakezone-headerMobile img{
+  width: 80vw; /* Adjust as needed */
+  height: auto;
+}
+
+.parrafolakezoneMobile {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #333; /* Adjust as needed */
+  background-color: #ececec;
+  box-shadow: #23232e 0px 0px 10px;
+  border-radius: 10px;
+  padding: 20px;
+}
+.escuelitaDeRiesgoBoton{
+  display: flex;
+width: auto;
+height: 20vh;
+display: block;
+margin-left: auto;
+margin-right: auto;
+
+}
+.LinksDeInteresLakezone-mobile img
+{
+  max-inline-size:60%;
+  block-size: auto;
+}
+
+
+
+.sidebar .icon{
+  min-width: 60px;
+  border-radius: 6px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+}
+
+.sidebar .text,
+.sidebar .icon{
+  color: var(--text-color);
+  transition: var(--tran-03);
+}
+
+.sidebar .text{
+  font-size: 17px;
+  font-weight: 500;
+  white-space: nowrap;
+  opacity: 1;
+}
+.sidebar.close .text{
+  opacity: 0;
+}
+/* =========================== */
+
+.sidebar header{
+  position: relative;
+}
+
+.sidebar header .image-text{
+  display: flex;
+  align-items: center;
+}
+.sidebar header .logo-text{
+  display: flex;
+  flex-direction: column;
+}
+header .image-text .name {
+  margin-top: 2px;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+header .image-text .profession{
+  font-size: 16px;
+  margin-top: -2px;
+  display: block;
+}
+
+.sidebar header .image{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+
+.sidebar.close .toggle{
+  transform: translateY(-50%) rotate(0deg);
+}
+
+
+.sidebar header .image img{
+  width: 40px;
+  border-radius: 6px;
+}
+
+.sidebar header .toggle{
+  position: absolute;
+  top: 50%;
+  right: -25px;
+  transform: translateY(-50%) rotate(180deg);
+  height: 25px;
+  width: 25px;
+  background-color: var(--primary-color);
+  color: var(--sidebar-color);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  cursor: pointer;
+  transition: var(--tran-05);
+}
+
+
+.sidebar.close .toggle{
+  transform: translateY(-50%) rotate(0deg);
+}
+
+.sidebar .menu{
+  margin-top: 40px;
+}
+
+.sidebar li.search-box{
+  border-radius: 6px;
+  background-color: var(--primary-color-light);
+  cursor: pointer;
+  transition: var(--tran-05);
+}
+
+.sidebar li.search-box input{
+  height: 100%;
+  width: 100%;
+  outline: none;
+  border: none;
+  background-color: var(--primary-color-light);
+  color: var(--text-color);
+  border-radius: 6px;
+  font-size: 17px;
+  font-weight: 500;
+  transition: var(--tran-05);
+}
+.sidebar li a{
+  list-style: none;
+  height: 100%;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: var(--tran-03);
+}
+
+.sidebar li a:hover{
+  background-color: var(--primary-color);
+}
+.sidebar li a:hover .icon,
+.sidebar li a:hover .text{
+  color: var(--sidebar-color);
+}
+body.dark .sidebar li a:hover .icon,
+body.dark .sidebar li a:hover .text{
+  color: var(--text-color);
+}
+
+.sidebar .menu-bar{
+  height: calc(100% - 55px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow-y: scroll;
+}
+.menu-bar::-webkit-scrollbar{
+  display: none;
+}
+
+
+
+
+.menu-bar .bottom-content .toggle-switch{
+  position: absolute;
+  right: 0;
+  height: 100%;
+  min-width: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.toggle-switch .switch{
+  position: relative;
+  height: 22px;
+  width: 40px;
+  border-radius: 25px;
+  background-color: var(--toggle-color);
+  transition: var(--tran-05);
+}
+
+.switch::before{
+  content: '';
+  position: absolute;
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  top: 50%;
+  left: 5px;
+  transform: translateY(-50%);
+  background-color: var(--sidebar-color);
+  transition: var(--tran-04);
+}
+
+body.dark .switch::before{
+  left: 20px;
+}
+
+.home{
+  position: absolute;
+  top: 0;
+  top: 0;
+  left: 250px;
+  height: 100vh;
+  width: calc(100% - 250px);
+  background-color: var(--body-color);
+  transition: var(--tran-05);
+}
+.home.hidden {
+  display: none;
+}
+.home .text{
+  font-size: 30px;
+  font-weight: 500;
+  color: var(--text-color);
+  padding: 12px 60px;
+}
+
+.sidebar.close ~ .home{
+  left: 78px;
+  height: 100vh;
+  width: calc(100% - 78px);
+}
+body.dark .home .text{
+  color: var(--text-color);
+}
+
+
+/* SIDEBAR */
+.hamburger {
+  display: block; /* Muestra el botón hamburguesa en dispositivos móviles */
+  position: fixed;
+  top: 20px;
+  left: 20px; /* Ajusta la posición del botón hamburguesa al lado izquierdo */
+  z-index: 999;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.hamburger-line {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: var(--text-color);
+  margin: 5px auto; /* Espaciado entre las líneas */
+  transition: all 0.3s ease;
+}
+
+/* Efecto de animación para convertir las líneas en una "X" al abrir el menú */
+.hamburger.open .hamburger-line:nth-child(1) {
+  transform: rotate(50deg) translate(5px, 5px);
+}
+
+.hamburger.open .hamburger-line:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.open .hamburger-line:nth-child(3) {
+  transform: rotate(-50deg) translate(5px, -5px);
+}
+
+.sidebar.close{
+  width: 0;
+  transform: translateX(-110vw);
+  transition: var(--tran-05);
+}
+
+/* ------------------------------- */
+  /*Botones menu index MOBILE*/
+  
+  .geo {
+    background-image: url(../img/geologíaBoton_.svg);
+  }
+  
+  .sism{
+    background-image: url(../img/sismologiaBoton_.svg);
+  }
+  
+  .hidro {
+    background-image: url(../img/hidrologiaboton_.svg);
+  }
+
+  .vulcan{
+    background-image: url(../img/Vulcanologiaboton_.svg);
+
+  }
+
+  .meteo{
+    background-image: url(../img/meteorologiaboton_.svg);
+  }
+
+  .ocean{
+    background-image: url(../img/oceanografiaboton_.svg);
+  }
+  
+  .box {
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+    margin: 20px;
+    transition: transform 0.5s ease;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .box:nth-of-type(even) {
+    transform: translateX(-400%);
+  }
+  
+  .box:nth-of-type(odd) {
+    transform: translateX(400%);
+  }
+  
+  .box.show {
+    transform: translateX(0);
+  }
+  
+ 
+  .box:active {
+    animation: wiggle 0.2s ease-in-out;
+  }
+  
+  .areasDeEstudioSection > img{
+    width: 100%;
+    height: auto;
+  }
+  
+  .areasDeEstudioSection,
+  .faqSection {
+    position: relative;
+    width: 100%;
+  }
+  .areasDeEstudioSectionVulcanologia.faqSection{
+    position: relative;
+    width: 100%;
+  }
+
+  .areasDeEstudioSectionVulcanologia > img{
+    width: 100%;
+    height: auto;
+  }
+
+
+
+  .areasDeEstudioSection {
+    background-image: url(../img/fondoMobileMARN.svg);
+    padding: 10%;
+    background-size: cover;
+  }
+  .areasDeEstudioSectionVulcanologia {
+    background-image: url(../img/fondoMobileVulca.svg);
+    padding: 5%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed; 
+  }
+
+  .mobile-content-vulcaIntermedio{
+    background-image: url(../img/fondoMobileVulca.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  }
+  .areasDeEstudioSectionGeologia {
+    background-image: url(../img/fondoMobileGeo.svg);
+    padding: 10%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed; 
+  }
+
+  
+.swiper {
+	width: 50vw;
+	height: 45vh;
+}
+
+.swiper-cards .swiper-slide{
+	overflow:hidden;
+}
+
+.swiper-slide {
+  
+	background: #fff;
+	border-radius: 18px;
+	position: relative;
+	z-index: 1;
+}
+
+.swiper-slide.swiper-slide-active {
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.ghost {
+  display: block; /* Asegura que el enlace ocupe todo el espacio disponible */
+  background:url(../img/ghost.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.jack {
+  display: block;
+	background:url(../img/jack.jpg);
+	background-size: cover;
+	background-position: center;
+}
+
+.god {
+  display: block;
+
+	background:url(../img/god.jpg);
+	background-size: cover;
+	background-position: center;
+}
+
+.joker {
+  display: block;
+
+	background:url(../img/joker.jpg);
+	background-size: cover;
+	background-position: center;
+}
+
+.wolverine {
+  display: block;
+	background:url(../img/wolverine.jpg);
+	background-size: cover;
+	background-position: center;
+}
+
+  .areasDeEstudioSectionGeologia > img{
+    width: 100%;
+    height: auto;
+  }
+  
+  .faqSection {
+    background-image: url(../img/faqFondoEstrellas.svg);
+    padding: 20px;
+    font-family: Arial, sans-serif;
+  }
+  .botonDeAprendeSobreElPlanetaTierra{
+    height: auto;
+    width: 50vh;
+    margin: 0 auto; /* Add this line to center the image horizontally */
+  }
+  
+  .lakezone-mobile > img {
+    top: -50px;
+    left: -88px; 
+  }
+
+
+.dividerImage, .image-container img {
+    width: 150%;
+    height: auto;
+    object-fit: cover;
+    z-index: 1;
+}
+
+.dividerImage {
+    position: relative;
+    top: -50px;
+    left: -20px;
+    z-index: 1;
+}
+
+.image-container img {
+  display: block;
+  margin: 0 auto;
+  width: 70%;
+  
+}
+
+.separador{
+  margin-top: 10px;
+  background-image: url(../img/bannerDivisorCafePapelRasgado.svg);
+  width: 150%;
+  height: 35vh;
+  background-repeat: no-repeat;
+  position: relative;
+  top: -70px;
+  left: -70px;
+  display: flex;
+  align-items: center;
+}
+
+  .image-container {
+    position: relative;
+    text-align: center;
+    padding-bottom: 3em;
+  }
+  
+  .imagenPrueba{
+    max-inline-size: 100%;
+  block-size: auto;
+  }
+  
+  .image-container h1 {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #ffffff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  }
+  
+  details {
+    background-color: rgba(241, 15, 230, 0.308); 
+    border-radius: 4px;
+    padding: 0.5em 0.5em 0;
+    margin-bottom: 1em;
+  }
+  
+  summary {
+    font-weight: bold;
+    color: #fff;
+    margin: -0.5em -0.5em 0;
+    padding: 0.5em;}
+  
+  details[open] {
+    color: #ffffff;
+    font-weight: bold;
+    font-weight: bold;
+    padding: 0.5em;
+    background-color: rgba(241, 25, 230, 0.508); 
+    border-radius: 10px;/* Add this line */
+  }
+  
+  details[open] summary {
+    margin-bottom: 0.5em;
+  }
+
+  .form-container {
+    padding: 20px;
+    border-radius: 5px;
+    max-width: 90%;
+    margin: auto; 
+  }
+  
+  .form-container h3 {
+    text-align: center;
+    color: #fff;
+    margin-bottom: 20px;
+  }
+  
+  .form-container form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .form-container label {
+    color: #fff;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  .form-container input[type="text"],
+  .form-container input[type="email"],
+  .form-container textarea {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    transition: box-shadow 0.3s ease;
+  }
+  
+  .form-container input[type="text"]:focus,
+  .form-container input[type="email"]:focus,
+  .form-container textarea:focus {
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+    outline: none;
+  }
+  
+  .form-container input[type="submit"] {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .form-container input[type="submit"]:hover {
+    background-color: #0056b3;
+  }
+  
+  .footerSection {
+    background-color: rgb(50, 62, 72);
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  
+  .footerSection img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .footerSectionIntermedio{
+    margin-top: 15vh;
+    background-color: rgb(50, 62, 72);
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .footerSectionIntermedio img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .actividadesExtra {
+    margin-top: 15vh;
+    margin-bottom: 15vh;
+    display: block; /* Coloca los elementos uno al lado del otro */
+    justify-content: space-around; /* Distribuye los elementos uniformemente en el contenedor */
+    text-align: center;
+}
+
+.actividadesExtra > .boton {
+  flex: 1;
+  margin: 0.5em auto;  /* Agrega algo de espacio alrededor de cada botón */
+  display: inline-block; /* Coloca los elementos uno al lado del otro */
+}
+
+.actividadesExtra > .boton > img {
+    width: 55%; /* Hace que las imágenes ocupen todo el ancho disponible */
+    height: auto; /* Mantiene la proporción de las imágenes */
+}
+
+.actividadesExtra > .boton-videos > img {
+  width: 100%; /* Adjust this value as needed */
+}
+
+/* HIDROLOGIA  */
+
+/* Navegación */
+
+body-mobile {
+  background-color: #F28B00;
+}
+
+
+/* Contenido principal */
+.temaPrincipal {
+  background-color: #ffffffbc;
+  border-radius: 1rem; /* Use rem instead of px */
+  box-shadow: 0 0.2rem 1rem rgba(0, 0, 0, 0.1);
+  padding: 2rem; /* Use rem instead of px */
+  max-width: 50rem; /* Use rem instead of px */
+  margin: 2rem auto;
+  text-align: justify;
+  box-shadow: 0 0.2rem 0.4rem rgba(0, 0, 0, 0.4);
+}
+
+.temaPrincipal img {
+  width: 100%;
+  height: auto;
+
+}
+.temaPrincipal h2 {
+  margin-top: 0;
+}
+
+.temaPrincipal p {
+  line-height: 1.6;
+}
+
+.temaPrincipal button {
+  background-color: #c68342;
+  color: #fff;
+  border: none;
+  border-radius: 0.5rem; /* Use rem instead of px */
+  padding: 1rem 2rem; /* Use rem instead of px */
+  text-transform: uppercase;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.temaPrincipal button:hover {
+  background-color: #00e1ff76;
+}
+
+/* Contenido secundario */
+.infoSecundaria {
+  background-color: #ffffffbc;
+  border-radius: 1rem;
+  box-shadow: 0 0.2rem 1rem rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  max-width: 50rem;
+  margin: 2rem auto;
+  text-align: justify;
+  overflow: hidden;
+  height: 300px;
+  height: 300px; /* Adjust as needed */
+}
+.infoSecundaria h3 {
+  margin-top: 0;
+}
+
+.infoSecundaria p {
+  line-height: 1.6;
+}
+
+.gridLayout{
+  display: grid;
+  gap: 9rem;
+  padding: 2rem;
+  grid-auto-rows: 22rem;
+  grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+}
+
+.introduccion {
+  display: grid;
+  background-color: #f0eade;
+  border-radius: 1rem;
+  box-shadow: #23232e 0px 0px 10px;
+  padding: 10%;
+margin-top: 20%;
+
+}
+
+.introImage {
+  grid-area: image; /* Assign to the image area */
+  height: auto;
+  width: 70%;
+  justify-self: center;
+  position: absolute;
+  top: 10rem;
+  margin-top: 20%;
+}
+
+.introText {
+  grid-area: text; /* Assign to the text area */
+}
+.preguntasFrecuentes{
+  display: grid;
+  margin-top: 15vh;
+
+}
+
+.preguntasFaqImagen{
+  height: auto;
+  width: 15rem;
+  display: flex;
+  margin: 0 auto; /* Centra horizontalmente */
+  text-align: center; /* Centra el contenido dentro del contenedor */
+}
+
+.eligeUnTemaImagen{
+  max-inline-size: 90%;
+  block-size: auto;
+  text-align: center;
+}
+
+.preguntasFaqTexto{
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border-radius: 1rem;
+  background-color: #ede7df75;
+  box-shadow: #23232e 0px 0px 10px;
+  padding: 10px;
+}
+
+/* VULCANOLOGIA-TEMAS */
+.vulcatemas-zoneMobile {
+  background-image: url(../img/fondovulcanologiamobile.svg);
+  /* Cambiar la imagen de fondo para dispositivos móviles */
+  height: 100vh;
+  /* Usar la altura completa de la pantalla del dispositivo móvil */
+  margin-top: 0; /* Eliminar el margen superior */
+}
+
+.temas-containerMobile {
+  background-color: rgba(255, 255, 255, 0.8);
+
+}
+
+.mobile-contentTemas{
+  background-image: url(../img/fondoMobileVulca.svg);
+}
+
+.mobile-header, .mobile-footer, .mobile-main, .mobile-aside, .mobile-article {
+  padding: 20px;
+  border-radius: 10px;
+}
+
+
+.mobile-header img{
+  max-inline-size: 100%;
+  block-size: auto;
+}
+
+.mobile-main {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas: "articles";
+}
+
+.mobile-aside {
+  grid-area: aside;
+  background-color: #e9ecef;
+}
+
+.mobile-articles {
+  grid-area: articles;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.mobile-article {
+  background-color: #fff;
+  border: 1px solid #ccc;
+}
+
+.mobile-footer img {
+  background-color: #333;
+  max-inline-size: 100%;
+  block-size: auto;
+}
+
+/* Hover effect for articles */
+.mobile-article:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.mobile-aside {
+  background-color: #f0f0f0;
+  margin: 3vh;
+}
+
+.related-topics {
+  list-style: none;
+  padding: 0;
+}
+
+.related-topics li {
+  margin-bottom: 10px;
+}
+
+.related-topics a {
+  text-decoration: none;
+  color: #333;
+}
+
+
+}
